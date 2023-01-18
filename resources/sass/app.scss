@@ -1,0 +1,574 @@
+/* ===============================================================================================================================
+   ======================================================= Import ================================================================
+   ===============================================================================================================================
+*/
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap");
+
+// Normalize
+@import "normalize";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Bootstrap
+@import "bootstrap/scss/bootstrap";
+
+/* ===============================================================================================================================
+   ======================================================= Variables/Mixin ======================================================
+   ===============================================================================================================================
+*/
+$colorBase: #021222;
+$colorSecundario: #cda434;
+$colorTerciario: #fff;
+$NoMostrar: none;
+$hover: rgba(0, 0, 0, 0.5);
+
+@mixin a {
+    font-size: 2rem;
+    text-decoration: $NoMostrar;
+    color: $colorTerciario;
+}
+
+@mixin btn {
+    height: 5rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-top: 1.5rem;
+    text-transform: uppercase;
+    background-color: $colorSecundario;
+    border-color: $colorSecundario;
+    border-style: solid;
+    border-radius: 1rem;
+    width: 20rem;
+    cursor: pointer;
+    color: $colorBase;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+@mixin paddingForm {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+@mixin before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 1s ease;
+}
+
+/* ===============================================================================================================================================
+   ======================================================= CSS ============================================================================
+   ===============================================================================================================================================
+*/
+* {
+    font-family: "Abhaya Libre";
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $colorBase;
+    font-size: 16px;
+    margin: 0rem;
+}
+
+/* ===============================================================================================================================================
+     ======================================================= Encabezado ============================================================================
+     ===============================================================================================================================================
+  */
+header {
+    color: $colorTerciario;
+    background-image: url(../../public/img/Main.png);
+    text-align: center;
+    padding-bottom: 8rem;
+
+    h1 {
+        margin-top: 10rem;
+        font-size: 7rem;
+    }
+}
+
+.reservas {
+    background-image: url(../../public/img/EncabezadoReserva.png);
+    background-size: cover;
+}
+
+.perfil {
+    background-image: url(../../public/img/EncabezadoPerfil.png);
+    background-size: cover;
+}
+
+.contactos {
+    background-image: url(../../public/img/EncabezadoContacto.png);
+    background-size: cover;
+}
+
+.menus {
+    background-image: url(../../public/img/EncabezadoMenu.png);
+    background-size: cover;
+}
+
+.sesion {
+    background-image: url(../../public/img/EncabezadoLogin.jpg);
+    background-size: cover;
+}
+
+/* ===============================================================================================================================================
+     ======================================================= Barra de navegacion ===================================================================
+     ===============================================================================================================================================
+  */
+nav {
+    display: flex;
+    padding: 2.5rem;
+    background: $colorBase;
+    opacity: 90%;
+
+    #check,
+    .boton {
+        display: $NoMostrar;
+    }
+}
+
+.links {
+    margin-top: 1rem;
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+
+    a {
+        @include a;
+        padding: 1rem;
+    }
+
+    .reserva {
+        color: #021222;
+    }
+
+    a:hover {
+        background-color: $hover;
+    }
+}
+
+#login {
+    display: $NoMostrar;
+}
+
+.reserva {
+    font-weight: bold;
+    background: $colorSecundario;
+    border: 1px solid;
+    border-color: $colorSecundario;
+    position: relative;
+}
+
+.reserva:hover {
+    color: $colorSecundario;
+}
+
+.reserva:before {
+    @include before;
+}
+
+.reserva:hover:before {
+    width: 100%;
+}
+
+/* ===============================================================================================================================================
+     ======================================================= Indice ============================================================================
+     ===============================================================================================================================================
+  */
+.indice {
+    color: $colorTerciario;
+    margin-left: 10rem;
+    margin-top: 1.5rem;
+
+    h2{
+        font-size: 1.25rem;
+    }
+}
+
+/* ===============================================================================================================================================
+     ======================================================= Contenido ============================================================================
+     ===============================================================================================================================================
+  */
+main {
+    color: $colorTerciario;
+    margin-top: 5rem;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+// Control de parametros invalidos
+.invalid-feedback {
+    font-size: 1.5rem;
+}
+/* 
+  ======================================================= Formulario ===========================================================
+*/
+#formulario {
+    background-color: #000a1a;
+    width: 40rem;
+    @include paddingForm;
+}
+
+input {
+    height: 4.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    color: black;
+}
+
+#validacion {
+    background-color: red;
+}
+
+#msj {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.botonFormulario {
+    @include btn;
+}
+
+.botonFormulario:hover {
+    color: $colorSecundario;
+    background-color: $hover;
+    border: 1px solid;
+    border-color: $colorSecundario;
+}
+
+textarea {
+    width: 25rem;
+    height: 15rem;
+    max-height: 25rem;
+    color: black;
+}
+
+/* 
+  ======================================================= Formulario recuadro ===========================================================
+*/
+.recuadro {
+    width: 90rem;
+    margin: 3rem auto;
+    border: 1px solid $colorTerciario;
+    border-radius: 3rem;
+    @include paddingForm;
+
+    h3 {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    h4 {
+        font-size: 1rem;
+    }
+}
+
+.opcion {
+    border: 1px solid $colorTerciario;
+    width: 83rem;
+    height: 4rem;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    margin: 1rem;
+}
+
+#lista {
+    display: block;
+    border-top: 1px solid $colorTerciario;
+    color: $colorTerciario;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+a {
+    @include a;
+}
+
+#entrada {
+    font-size: 1.5rem;
+    margin-bottom: 0rem;
+    margin-top: 2rem;
+}
+
+.campoActualizado {
+    width: 75rem;
+    padding: 5rem;
+    border: 1px solid $colorTerciario;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 5rem;
+    margin-left: 35rem;
+}
+
+.cuadro {
+    border: 1px solid $colorTerciario;
+    width: 3rem;
+    height: 2rem;
+    border-radius: 0.25rem;
+}
+
+.botonRecuadro {
+    @include btn;
+    margin-top: 3rem;
+}
+
+.botonRecuadro:hover {
+    color: $colorSecundario;
+    background-color: $hover;
+    border: 1px solid;
+    border-color: $colorSecundario;
+}
+
+.form-control {
+    font-size: 1.5rem;
+}
+
+.link-light {
+    margin-top: 1rem;
+}
+
+/* ======================================================= Calendario ======================================================================== */
+#calendario {
+    font-size: 4rem;
+    padding: 1.5rem;
+    margin-bottom: 5rem;
+    border: 1px solid #fff;
+    border-radius: 1rem;
+}
+
+.fc-event-main {
+    font-size: 1.5rem;
+}
+
+/* ======================================================= Bloque 1 ======================================================================== */
+#bloque1 {
+    background-image: url(../../public/img/Informacion.png);
+    background-size: cover;
+    background-position: center center;
+    border-radius: 3rem;
+    font-size: 1rem;
+    padding: 3rem;
+    margin-top: 3rem;
+}
+
+/* ======================================================= Bloque 2 ======================================================================== */
+#bloque2 {
+    font-size: 1rem;
+    margin-bottom: 5rem;
+    margin-top: 6rem;
+
+    #infoBloque2 {
+        margin-top: 5rem;
+    }
+}
+
+#imagenBloque2 {
+    margin-left: 8rem;
+}
+
+/* ======================================================= Menu ======================================================================== */
+#menu {
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+fieldset {
+    padding: 0.75rem;
+    border: 3px solid $colorSecundario;
+}
+
+/* ======================================================= Multimedia ======================================================================== */
+
+/* ===============================================================================================================================================
+     ======================================================= Footer =========================================================================
+     ===============================================================================================================================================
+  */
+footer {
+    border-top: 1px solid $colorTerciario;
+    padding: 1.5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    color: $colorTerciario;
+}
+
+/* ===============================================================================================================================================
+     ======================================================= Responsive ============================================================================
+     ===============================================================================================================================================
+  */
+@media screen and (max-width: 75rem) {
+    .recuadro,
+    .opcion,
+    .campoActualizado {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 55rem) {
+    #perfil {
+        padding: 2rem;
+    }
+
+    #calendario {
+        display: block;
+    }
+
+    #horasDisponibles {
+        display: flex;
+    }
+
+    #imagenBloque2 {
+        display: none;
+    }
+}
+
+/* ===============================================================================================================================================
+     ======================================================= Menu responsive ============================================================================
+     ===============================================================================================================================================
+  */
+@media (max-width: 43rem) {
+    #bloque1 {
+        font-size: 0.5rem;
+        padding: 1rem;
+    }
+
+    #bloque2 {
+        margin-top: 0rem;
+    }
+
+    #imagenBloque2 {
+        margin-left: 0rem;
+    }
+
+    .opcion,
+    .campoActualizado {
+        margin-left: 2rem;
+    }
+
+    #perfil {
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 6.5rem;
+    }
+
+    .container {
+        width: 50%;
+    }
+
+    .imagenLogo {
+        display: $NoMostrar;
+    }
+
+    nav {
+        .boton {
+            display: inline-block;
+            position: absolute;
+            top: 0rem;
+            right: 0rem;
+        }
+
+        .boton label {
+            display: inline-block;
+            padding: 3rem;
+        }
+
+        .boton label:hover,
+        #check:checked ~ .boton label {
+            cursor: pointer;
+        }
+
+        .links a {
+            display: block;
+            color: $colorBase;
+            font-size: 1.6rem;
+        }
+
+        .links a:hover {
+            color: $colorSecundario;
+        }
+
+        #check:not(:checked) ~ .links {
+            display: $NoMostrar;
+        }
+
+        #check:checked ~ .links {
+            height: 28rem;
+        }
+    }
+
+    .links {
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        background-color: $colorBase;
+        top: 10rem;
+        right: 0rem;
+
+        .reserva {
+            font-weight: bold;
+        }
+    }
+
+    #login {
+        display: block;
+    }
+
+    .transicion {
+        background: $colorSecundario;
+        border: 1px solid;
+        border-color: $colorSecundario;
+        position: relative;
+        font-weight: bold;
+    }
+
+    .transicion:before {
+        @include before;
+    }
+
+    .transicion:hover:before {
+        width: 100%;
+    }
+}
+
+/* ===============================================================================================================================================
+     ======================================================= Hoja de estilo auditiva ============================================================================
+     ===============================================================================================================================================
+  */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    voice-family: male;
+    stress: 20;
+    richness: 90;
+    speak: normal;
+}
+
+p {
+    voice-family: male;
+    stress: 15;
+    richness: 50;
+    speak: normal;
+}
