@@ -13,13 +13,14 @@
     @endsection
 
     @section('contenido')
-        <div class="container-fluid">
+        <div class="container-fluid">          
             <form method="POST" action="/reservaFinalizada" class="recuadro">
                 @csrf
                 <h3>Datos de reserva</h3>
-
+                <p class="text-center">Fecha: {{ $fecha }}</p>
+                <p class="text-center">Hora: {{ $hora }}</p>
                 <div class="row">
-                    <div class="col-5">
+                    <div class="col-sm-5">
 
                         <label id="entrada" for="person" class="form-label">Personas</label>
                         <input type="number" min="4" max="8" id="person" name="person"
@@ -50,7 +51,7 @@
 
                     <div class="col-2"></div>
 
-                    <div class="col-5">
+                    <div class="col-sm-5">
 
                         <label id="entrada" for="email" class="form-label">Email</label>
                         <input type="email" id="email" name="email" class="form-control" required

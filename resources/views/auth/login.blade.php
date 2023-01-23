@@ -15,7 +15,7 @@
 @section('contenido')
 <div class="container">
     <div class="flex justify-center">
-        <div id="formulario" class="w-3/12 h-auto m-6 pt-8 pb-8 pr-16 pl-16 text-3xl">
+        <div id="formulario2" class="w-3/12 h-auto m-6 pt-8 pb-8 pr-16 pl-16 text-3xl">
             <form method="POST" action="{{ route('login') }}">
                 @csrf
 

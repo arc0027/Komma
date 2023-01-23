@@ -19,7 +19,7 @@
    ======================================================= Variables/Mixin ======================================================
    ===============================================================================================================================
 */
-$colorBase: #021222;
+$colorBase: #03172b;
 $colorSecundario: #cda434;
 $colorTerciario: #fff;
 $NoMostrar: none;
@@ -146,7 +146,7 @@ nav {
 
     a {
         @include a;
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .reserva {
@@ -223,9 +223,16 @@ p {
 */
 #formulario {
     background-color: #000a1a;
-    width: 40rem;
+    width: 75rem;
     @include paddingForm;
 }
+
+#formulario2 {
+    background-color: #000a1a;
+    width: 45rem;
+    @include paddingForm;
+}
+
 
 input {
     height: 4.5rem;
@@ -256,7 +263,7 @@ input {
 
 textarea {
     width: 25rem;
-    height: 15rem;
+    height: 17rem;
     max-height: 25rem;
     color: black;
 }

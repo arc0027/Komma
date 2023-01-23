@@ -159,6 +159,9 @@ class ReservaController extends Controller
             $reserva->numero_personas =  $person;
             $reserva->save();
             Horarios::where('id', $idHorario)->update(['estados' => 'No Disponible']);
+            
+            Session::flash("mensaje", "Su reserva se ha registrado correctamente");
+            return redirect("misReservas");
         } else {
             $invitado = new Invitados();
             $invitado->email = $email;
@@ -176,9 +179,10 @@ class ReservaController extends Controller
             $reserva->numero_personas =  $person;
             $reserva->save();
             Horarios::where('id', $idHorario)->update(['estados' => 'No Disponible']);
-        }
-        Session::flash("mensaje", "Su reserva se ha registrado correctamente");
-        return view("reservaFinalizada");
+
+            Session::flash("mensaje", "Su reserva se ha registrado correctamente");
+            return view("reservaFinalizada");
+        }  
     }
 
     /**

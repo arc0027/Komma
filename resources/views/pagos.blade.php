@@ -33,11 +33,11 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-sm-6">
                         <label id="entrada" for="fecha_vencimiento" class="form-label">Fecha de vencimiento</label>
                         <input type="date" id="fecha_vencimiento" name="fecha_vencimiento" class="form-control focus:border-yellow-600" required />
                     </div>
-                    <div class="col-6">
+                    <div class="col-sm-6">
                         <label id="entrada" for="CVV" class="form-label">CVV</label>
                         <input type="number" id="CVV" name="CVV" class="form-control focus:border-yellow-600" required>
                     </div>

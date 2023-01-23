@@ -31,13 +31,11 @@
         </div>
 
         <div class="links">
-          <a class="transicion" href="index">Inicio</a>
           <a class="transicion" href="menu">Menu</a>
           <a class="transicion" href="contacto">Contacto</a>
-          <a class="transicion" href="multimedia">Multimedia</a>
           <a class="reserva" href="reserva1">Reserva</a>
           <a id="login" class="transicion" href="login"> @if (Auth::user() != null)
-           Perfil @else Login @endif</a>
+          Perfil @else Login @endif</a>
         </div>
 
         <div class="imagenLogo">

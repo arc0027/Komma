@@ -17,7 +17,7 @@
             <div id="perfil" class="row">
                 <div class="col-sm-2 text-center justify-center">
                     <div class="flex justify-center">
-                        <img src="img/Login.png" width="100px" height="100px" alt="Imagen de perfil"/>
+                        <img src="img/Sesion.png" width="100px" height="100px" alt="Imagen de perfil"/>
                     </div>
                     <p>
                         <br> <b class="text-2xl">Nombre:</b> {{ auth()->user()->name }} <br />

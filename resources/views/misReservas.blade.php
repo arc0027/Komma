@@ -43,10 +43,10 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @isset($reservas)
+                                @if (isset($reservas))
                                     @foreach ($reservas as $r)
                                         <tr>
-                                            <td>{{ $r->id_reservas }}</td>
+                                            <td>{{ $r->id_reservas }}</td><td>{{ $r->id_reservas }}</td>
                                             <td>{{ $r->horarios->fecha }}</td>
                                             <td>{{ $r->horarios->fecha }}</td>
                                             <td>{{ $r->menus->name }}</td>
@@ -55,7 +55,11 @@
                                             <td><a class="botonFormulario text-base" href="/cancelarReserva/{{$r->id_reservas}}/{{$r->horarios->id}}">Cancelar</a></td>
                                         </tr>
                                     @endforeach
-                                @endisset
+                                @else
+                                    <tr>
+                                        <td>No hay reservas</td>
+                                    </tr>
+                                @endif
                             </tbody>
                         </table>
                     </div>
