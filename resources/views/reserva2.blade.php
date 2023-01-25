@@ -17,14 +17,16 @@
             <form method="POST" action="/reservaFinalizada" class="recuadro">
                 @csrf
                 <h3>Datos de reserva</h3>
-                <p class="text-center">Fecha: {{ $fecha }}</p>
-                <p class="text-center">Hora: {{ $hora }}</p>
+
+                
                 <div class="row">
+                    <div class="col-sm-6"><p class="text-center"><b class="text-2xl">Fecha:</b> {{ date("d-m-Y", strtotime($fecha)) }}</p></div>
+                    <div class="col-sm-6"><p class="text-center"><b class="text-2xl">Hora:</b> {{ $hora }}</p></div>
                     <div class="col-sm-5">
 
                         <label id="entrada" for="person" class="form-label">Personas</label>
                         <input type="number" min="4" max="8" id="person" name="person"
-                            class="form-control" required value={{ old('person') }}>
+                            class="form-control focus:border-yellow-600" required value={{ old('person') }}>
                         @error('person')
                             <p id="validacion" class="text-white">
                                 {{ $message }}
@@ -32,7 +34,7 @@
                         @enderror
 
                         <label id="entrada" for="phone" class="form-label">Telefono</label>
-                        <input type="tel" id="phone" name="phone" class="form-control" required
+                        <input type="tel" id="phone" name="phone" class="form-control focus:border-yellow-600" required
                             value={{ old('phone') }} @if (Auth::user() != null) {{ auth()->user()->phone }} @endif>
                         @error('phone')
                             <p id="validacion" class="text-white">
@@ -41,7 +43,7 @@
                         @enderror
 
                         <label id="entrada" for="tarjeta" class="form-label">Menu</label>
-                        <select id="menus" name="menus" class="form-select">
+                        <select id="menus" name="menus" class="form-select focus:border-yellow-600">
                             @foreach ($menus as $m)
                                 <option class="text-center text-3xl" id="menus" value="{{ $m->name }}">
                                     {{ $m->name }}</option>
@@ -54,7 +56,7 @@
                     <div class="col-sm-5">
 
                         <label id="entrada" for="email" class="form-label">Email</label>
-                        <input type="email" id="email" name="email" class="form-control" required
+                        <input type="email" id="email" name="email" class="form-control focus:border-yellow-600" required
                             value={{ old('email') }} @if (Auth::user() != null) {{ auth()->user()->email }} @endif>
                         @error('email')
                             <p id="validacion" class="text-white">
@@ -63,7 +65,7 @@
                         @enderror
 
                         <label id="entrada" for="name" class="form-label">Nombre</label>
-                        <input type="text" id="name" name="name" class="form-control" required
+                        <input type="text" id="name" name="name" class="form-control focus:border-yellow-600" required
                             value={{ old('name') }} @if (Auth::user() != null) {{ auth()->user()->name }} @endif>
                         @error('name')
                             <p id="validacion" class="text-white">
@@ -72,7 +74,7 @@
                         @enderror
 
                         <label id="entrada" for="tarjeta" class="form-label">Tarjeta</label>
-                        <input type="text" id="tarjeta" name="tarjeta" class="form-control" required
+                        <input type="text" id="tarjeta" name="tarjeta" class="form-control focus:border-yellow-600" required
                             value={{ old('tarjeta') }}>
                         @error('tarjeta')
                             <p id="validacion" class="text-white">
@@ -85,7 +87,7 @@
                     <input type="hidden" id="hora" name="hora" value="{{ $hora }}" {{ $hora }}>
 
                     <div class="text-center">
-                        <button type="submit" class="botonRecuadro">Reservar</button>
+                        <button id="botonFormulario" type="submit" class="mt-10 mb-3">Reservar</button>
                     </div>
 
                 </div>

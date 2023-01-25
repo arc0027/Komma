@@ -43,7 +43,7 @@
                     </div>
 
                     <div class="text-center">
-                        <button type="submit" class="botonFormulario">Guardar metodo de pago</button>
+                        <button id="botonFormulario" type="submit" class="mt-3 mb-3">Guardar metodo de pago</button>
                     </div>
                 </div>
             </form>

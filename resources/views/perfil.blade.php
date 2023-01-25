@@ -13,11 +13,11 @@
     @endsection
 
     @section('contenido')
-        <div class="container-fluid">
-            <div id="perfil" class="row">
-                <div class="col-sm-2 text-center justify-center">
+        <div class="container-fluid px-16 mb-10">
+            <div id="perfil" class="row mb-8">
+                <div class="col-sm-6 text-center mb-6">
                     <div class="flex justify-center">
-                        <img src="img/Sesion.png" width="100px" height="100px" alt="Imagen de perfil"/>
+                        <img src="img/Sesion.png" width="100px" height="100px" alt="Imagen de perfil" />
                     </div>
                     <p>
                         <br> <b class="text-2xl">Nombre:</b> {{ auth()->user()->name }} <br />
@@ -25,31 +25,19 @@
                         <b class="text-2xl">Telefono:</b> {{ auth()->user()->phone }}
                     </p>
                 </div>
-                <div class="col-sm-10">
-                    <form class="recuadro">
-                        <div class="opcion">
-                            <a href="misReservas">
-                                <div class="text-center">
-                                    <p>Mis reservas</p>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="opcion">
-                            <a href="pagos">
-                                <div class="text-center">
-                                    <p>Metodos de pago</p>
-                                </div>
-                            </a>
-                        </div>
+                <div class="col-sm-6 justify-center">
+                    <form action="/misReservas" class="flex justify-center mb-8">
+                        <input type="submit" id="botonPerfil" value="Mis Reservas">
                     </form>
-                </div>
-                <div class="col">
+                    <form action="/pagos" class="flex justify-center mb-8">
+                        <input type="submit" id="botonPerfil" value="Metodos de pago">
+                    </form>
                     <form action="{{ route('logout') }}" method="POST" class="flex justify-center mb-8">
                         @csrf
-                        <input type="submit" class="botonRecuadro" value="Cerrar sesion">
+                        <input id="botonPerfil" type="submit" value="Cerrar sesion">
                     </form>
+
                 </div>
             </div>
-
         </div>
     @endsection

@@ -57,17 +57,8 @@
     </nav>
 
     @yield('titulo')
+    @yield('contenido')
     </header>
-
-    <!-- Indice de las paginas -->
-    <div class="indice">
-        @yield('indice')
-    </div>
-
-    <!-- Contenido -->
-    <main>
-        @yield('contenido')
-    </main>
 
     <!-- Footer -->
     <footer class=" pt-5 pb-5 footer">
@@ -75,20 +66,19 @@
             <div class="row">
                 <div id="sobre-nosotros" class="col-lg-5 col-xs-12">
                     <h3>Sobre nosotros</h3>
-                    <p class="pr-5"> Komma es un restaurante fundado en 2015 en Cordoba;
+                    <p class="pr-5"> Komma es un restaurante fundado en 2015 en la Plaza de la Corredera, Cordoba;
                         adquirido en 2020 por el fondo estadounidense KKR​,
                         con sede en Nueva York, por 200 millones de euros. La compañía se
                         convertía así en la joya de la corona del holding gastronomico en
                         Europa.</p>
                 </div>
                 <div id="contactos-empresa" class="col-lg-5 col-xs-12">
-                    <h3 class="mt-lg-0 mt-sm-4">Información</h3>
+                    <h3 class="mt-lg-0 mt-sm-4">Informacion</h3>
                     <p class="mb-0"><i class="fa  fa-map-marker mr-3"></i>C. Escritora Ángeles López de Ayala, 7, 14005 Córdoba</p>
                     <p class="mb-0"><i class="fa fa-info mr-3"></i>Abierto: 10:00 - 00:00</p>
                     <p class="mb-0"><i class="fa fa-phone mr-3"></i>+34 600102030</p>
                     <p><i class="fa fa-envelope mr-3"></i>Komma@gmail.com</p>
                 </div>
-                
                 <div id="Logo" class="col-lg-1 col-xs-12">
                     <a href="index">
                         <img src="img/Logo.svg" height="75" width="105" alt="Logo del restaurante" />

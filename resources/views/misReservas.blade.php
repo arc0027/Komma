@@ -30,8 +30,8 @@
                 <h4>Lista de reserva</h4>
                 <div id="lista">
                     <div class="text-center">
-                        <table class="text-7xl">
-                            <thead>
+                        <table class="table text-7xl">
+                            <thead class="thead-dark">
                                 <tr>
                                     <th>Id</th>
                                     <th>Fecha</th>
@@ -46,13 +46,15 @@
                                 @if (isset($reservas))
                                     @foreach ($reservas as $r)
                                         <tr>
-                                            <td>{{ $r->id_reservas }}</td><td>{{ $r->id_reservas }}</td>
+                                            <td>{{ $r->id_reservas }}</td>
                                             <td>{{ $r->horarios->fecha }}</td>
-                                            <td>{{ $r->horarios->fecha }}</td>
+                                            <td>{{ $r->horarios->hora }}</td>
                                             <td>{{ $r->menus->name }}</td>
                                             <td>{{ $r->id_mesas }}</td>
                                             <td>{{ $r->numero_personas }}</td>
-                                            <td><a class="botonFormulario text-base" href="/cancelarReserva/{{$r->id_reservas}}/{{$r->horarios->id}}">Cancelar</a></td>
+                                            <td><a id="botonFormulario" class="text-base"
+                                                    href="/cancelarReserva/{{ $r->id_reservas }}/{{ $r->horarios->id }}">Cancelar</a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 @else
@@ -62,14 +64,14 @@
                                 @endif
                             </tbody>
                         </table>
+                        <div class="text-center mb-10">
+                            <form method="GET" action="/realizarReservas">
+                                @csrf
+                                <input id="botonFormulario" type="submit" value="Realizar reserva">
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="text-center mb-10">
-                <form method="GET" action="/realizarReservas">
-                    @csrf
-                    <input type="submit" class="botonFormulario" value="Realizar reserva">
-                </form>
             </div>
         </div>
     @endsection

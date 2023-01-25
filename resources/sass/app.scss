@@ -35,7 +35,7 @@ $hover: rgba(0, 0, 0, 0.5);
     height: 5rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
-    margin-top: 1.5rem;
+    margin-top: 4rem;
     text-transform: uppercase;
     background-color: $colorSecundario;
     border-color: $colorSecundario;
@@ -87,14 +87,49 @@ body {
   */
 header {
     color: $colorTerciario;
-    background-image: url(../../public/img/Main.png);
     text-align: center;
     padding-bottom: 8rem;
+    background-size: cover;
 
     h1 {
         margin-top: 10rem;
         font-size: 7rem;
     }
+}
+
+.index {
+    background-image: url(../../public/img/Index.svg);
+    background-size: cover;
+    height: 85rem;
+}
+
+.titulo-index {
+    color: $colorBase;
+    text-shadow: 2px 2px $colorSecundario;
+    margin-top: 13rem;
+    font-size: 17rem;
+}
+
+#true {
+    font-size: 6rem;
+    color: $colorSecundario;
+    text-shadow: 3px 3px $colorBase;
+}
+
+.botonIndex {
+    @include btn;
+    background-color: $hover;
+    border: 1px solid;
+    border-color: $colorSecundario;
+    color: $colorSecundario;
+    margin-top: 3rem;
+}
+
+.botonIndex:hover {
+    color: $colorBase;
+    background-color: $colorSecundario;
+    border: 2px solid;
+    border-color: $colorBase;
 }
 
 .reservas {
@@ -168,6 +203,7 @@ nav {
     border: 1px solid;
     border-color: $colorSecundario;
     position: relative;
+    box-shadow: 2px 2px 2px black;
 }
 
 .reserva:hover {
@@ -187,11 +223,13 @@ nav {
      ===============================================================================================================================================
   */
 .indice {
-    color: $colorTerciario;
+    color: $colorSecundario;
+    font-weight: bold;
+    text-shadow: 2px 2px #000a1a;
     margin-left: 10rem;
     margin-top: 1.5rem;
 
-    h2{
+    h2 {
         font-size: 1.25rem;
     }
 }
@@ -223,16 +261,19 @@ p {
 */
 #formulario {
     background-color: #000a1a;
-    width: 75rem;
+    width: 90rem;
+    margin-bottom: 8rem;
+    box-shadow: 3px 3px 3px black;
     @include paddingForm;
 }
 
 #formulario2 {
     background-color: #000a1a;
     width: 45rem;
+    margin-bottom: 8rem;
+    box-shadow: 3px 3px 3px black;
     @include paddingForm;
 }
-
 
 input {
     height: 4.5rem;
@@ -250,11 +291,11 @@ input {
     text-align: center;
 }
 
-.botonFormulario {
+#botonFormulario {
     @include btn;
 }
 
-.botonFormulario:hover {
+#botonFormulario:hover {
     color: $colorSecundario;
     background-color: $hover;
     border: 1px solid;
@@ -272,10 +313,12 @@ textarea {
   ======================================================= Formulario recuadro ===========================================================
 */
 .recuadro {
+    background-color: #000a1a;
     width: 90rem;
     margin: 3rem auto;
-    border: 1px solid $colorTerciario;
+    margin-bottom: 10rem;
     border-radius: 3rem;
+    box-shadow: 3px 3px 3px black;
     @include paddingForm;
 
     h3 {
@@ -300,8 +343,7 @@ textarea {
 
 #lista {
     display: block;
-    border-top: 1px solid $colorTerciario;
-    color: $colorTerciario;
+    border-top: 1px solid $colorSecundario;
     font-size: 2rem;
     padding: 1rem;
 }
@@ -333,18 +375,6 @@ a {
     border-radius: 0.25rem;
 }
 
-.botonRecuadro {
-    @include btn;
-    margin-top: 3rem;
-}
-
-.botonRecuadro:hover {
-    color: $colorSecundario;
-    background-color: $hover;
-    border: 1px solid;
-    border-color: $colorSecundario;
-}
-
 .form-control {
     font-size: 1.5rem;
 }
@@ -360,20 +390,24 @@ a {
     margin-bottom: 5rem;
     border: 1px solid #fff;
     border-radius: 1rem;
+    box-shadow: 3px 3px 3px black;
 }
 
 .fc-event-main {
     font-size: 1.5rem;
 }
+.fc-daygrid-event {
+    height: 3.5rem;
+}
 
 /* ======================================================= Bloque 1 ======================================================================== */
 #bloque1 {
-    background-image: url(../../public/img/Informacion.png);
+    background-image: url(../../public/img/Index.png);
     background-size: cover;
     background-position: center center;
     border-radius: 3rem;
     font-size: 1rem;
-    padding: 3rem;
+    padding: 5rem;
     margin-top: 3rem;
 }
 
@@ -398,23 +432,71 @@ a {
     margin-bottom: 5rem;
 }
 
+#menu-titulo {
+    margin-top: 5rem;
+    color: $colorSecundario;
+    text-shadow: 2px 2px #000a1a;
+}
+
 fieldset {
     padding: 0.75rem;
     border: 3px solid $colorSecundario;
+    box-shadow: 2px 2px 2px black;
 }
 
-/* ======================================================= Multimedia ======================================================================== */
+/* ======================================================= Tablas ======================================================================== */
+table {
+    color: $colorTerciario;
+}
+
+tr {
+    color: $colorTerciario;
+}
+
+/* ===============================================================================================================================================
+     ======================================================= Perfil =========================================================================
+     ===============================================================================================================================================
+  */
+#perfil {
+    margin-bottom: 10rem;
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+#botonPerfil {
+    @include btn;
+    width: 100%;
+}
+
+#botonPerfil:hover {
+    color: $colorSecundario;
+    background-color: $hover;
+    border: 1px solid;
+    border-color: $colorSecundario;
+}
 
 /* ===============================================================================================================================================
      ======================================================= Footer =========================================================================
      ===============================================================================================================================================
   */
-footer {
-    border-top: 1px solid $colorTerciario;
-    padding: 1.5rem;
-    margin-left: 5rem;
-    margin-right: 5rem;
-    color: $colorTerciario;
+.footer {
+    background: $colorSecundario;
+    color: $colorBase;
+
+    #sobre-nosotros {
+        i {
+            font-size: 3rem;
+        }
+    }
+    #contactos-empresa {
+        i {
+            font-size: 1rem;
+        }
+    }
+    #copyright p {
+        border-top: 1px solid $colorBase;
+        color: $colorBase;
+    }
 }
 
 /* ===============================================================================================================================================
@@ -445,6 +527,9 @@ footer {
     #imagenBloque2 {
         display: none;
     }
+    #Logo {
+        display: none;
+    }
 }
 
 /* ===============================================================================================================================================
@@ -452,6 +537,21 @@ footer {
      ===============================================================================================================================================
   */
 @media (max-width: 43rem) {
+    .titulo-index {
+        font-size: 10rem;
+        margin-top: 16rem;
+    }
+
+    #true {
+        font-size: 3rem;
+        color: $colorSecundario;
+        text-shadow: 3px 3px $colorBase;
+    }
+
+    #menu-titulo {
+        margin-top: 2rem;
+    }
+
     #bloque1 {
         font-size: 0.5rem;
         padding: 1rem;
@@ -519,7 +619,7 @@ footer {
         }
 
         #check:checked ~ .links {
-            height: 28rem;
+            height: 22.2rem;
         }
     }
 

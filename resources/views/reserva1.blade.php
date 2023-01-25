@@ -20,9 +20,8 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12 text-center mt-5 mb-5">
-                    <h3>Horas</h3>
-                    <div id="horasDisponibles"></div>
+                <div class="col-md-12 flex justify-center text-center mt-5 mb-5">
+                    <div class="horasDisponibles"></div>
                 </div>
             </div>
 
@@ -75,11 +74,16 @@
                                 type: "mostrarHoras"
                             },
                             success: function(response) {
-                                var horasDisponibles = document.getElementById("horasDisponibles");
+                                var horasDisponibles = document.querySelector(".horasDisponibles");
+                                horasDisponibles.setAttribute("id", "formulario");
                                 horasDisponibles.innerHTML = "";
+                                var titulohoras = document.createElement("h3");
+                                titulohoras.innerHTML = "Horas";
+                                horasDisponibles.appendChild(titulohoras);
                                 response.forEach(function(response) {
                                     var botonhoras = document.createElement("button");
-                                    botonhoras.className = "botonFormulario m-3";
+                                    botonhoras.setAttribute("id", "botonFormulario");
+                                    botonhoras.className = "m-3";
                                     botonhoras.innerHTML = response.hora;
                                     botonhoras.addEventListener("click", function() {
                                         document.getElementById("fecha").value = fecha;
@@ -89,7 +93,7 @@
                                     horasDisponibles.appendChild(botonhoras);
                                 });
                                 $("html, body").animate({
-                                    scrollTop: $("#horasDisponibles").offset().top
+                                    scrollTop: $(".horasDisponibles").offset().top
                                 }, "fast");
                             }
 

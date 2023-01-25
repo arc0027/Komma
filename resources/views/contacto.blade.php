@@ -25,7 +25,7 @@
             <form id="formulario" method="POST" action="/contacto" class="w-3/12 h-auto m-6 pt-8 pb-8 pr-16 pl-16">
                 @csrf
 
-                <div class="row  text-3xl">
+                <div class="row  text-4xl">
                     <div class="col-sm-5">
 
                         <label id="entrada" for="email" class="form-label">Email</label>
@@ -91,9 +91,8 @@
                     </div>
 
                     <div class="text-center">
-                        <input type="submit" class="botonFormulario" value="Enviar">
+                        <input id="botonFormulario" type="submit" class="mt-4 mb-3" value="Enviar">
                     </div>
-
                 </div>
 
 

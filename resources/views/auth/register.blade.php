@@ -17,7 +17,7 @@
                 <form id="formulario" method="POST" action="{{ route('register') }}" class="w-3/4 h-auto m-6 pt-8 pb-8 pr-16 pl-16 text-3xl">
                         @csrf
                         <div class="row">
-                            <div class="col-12">
+                            <div class="col-sm-12 text-center">
                                 <label id="entrada" for="email" class="form-label">Email</label>
                                 <input id="email" type="email"
                                     class="form-control focus:border-yellow-600 @error('email') is-invalid @enderror"
@@ -30,7 +30,7 @@
                                 @enderror
                             </div>
 
-                            <div class="col-sm-6">
+                            <div class="col-sm-5 text-center">
                                 <label id="entrada" for="name" class="form-label">Nombre</label>
                                 <input id="name" type="text"
                                     class="form-control focus:border-yellow-600 @error('name') is-invalid @enderror"
@@ -51,9 +51,11 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-
                             </div>
-                            <div class="col-sm-6">
+
+                            <div class="col-2"></div>
+
+                            <div class="col-sm-5 text-center">
 
                                 <label id="entrada" for="password" class="form-label">Contraseña</label>
                                 <input id="password" type="password"
@@ -74,14 +76,12 @@
                             </div>
                         </div>
                     
-                        <div class="text-center">
-                            <div class="row mb-0">
+                            <div class="row text-center mb-0 mt-8">
                                 <div class="col">
-                                    <input type="submit" class="botonFormulario" value="Registrarse">
+                                    <input id="botonFormulario" type="submit" value="Registrarse">
                                 </div>
                                 <a href="login" class="link-light">Login</a>
                             </div>
-                        </div>
 
                     </form>
             </div>
