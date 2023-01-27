@@ -97,6 +97,34 @@ header {
     }
 }
 
+.reservas {
+    background-image: url(../../public/img/EncabezadoReserva.png);
+    background-size: cover;
+}
+
+.perfil {
+    background-image: url(../../public/img/EncabezadoPerfil.png);
+    background-size: cover;
+}
+
+.contactos {
+    background-image: url(../../public/img/EncabezadoContacto.png);
+    background-size: cover;
+}
+
+.menus {
+    background-image: url(../../public/img/EncabezadoMenu.png);
+    background-size: cover;
+}
+
+.sesion {
+    background-image: url(../../public/img/EncabezadoLogin.jpg);
+    background-size: cover;
+}
+
+/* 
+ ======================================================= Index =========================================================================
+*/
 .index {
     background-image: url(../../public/img/Index.svg);
     background-size: cover;
@@ -130,31 +158,6 @@ header {
     background-color: $colorSecundario;
     border: 2px solid;
     border-color: $colorBase;
-}
-
-.reservas {
-    background-image: url(../../public/img/EncabezadoReserva.png);
-    background-size: cover;
-}
-
-.perfil {
-    background-image: url(../../public/img/EncabezadoPerfil.png);
-    background-size: cover;
-}
-
-.contactos {
-    background-image: url(../../public/img/EncabezadoContacto.png);
-    background-size: cover;
-}
-
-.menus {
-    background-image: url(../../public/img/EncabezadoMenu.png);
-    background-size: cover;
-}
-
-.sesion {
-    background-image: url(../../public/img/EncabezadoLogin.jpg);
-    background-size: cover;
 }
 
 /* ===============================================================================================================================================
@@ -256,20 +259,20 @@ p {
 .invalid-feedback {
     font-size: 1.5rem;
 }
-/* 
-  ======================================================= Formulario ===========================================================
-*/
+/* ===============================================================================================================================================
+     ======================================================= Formularios =========================================================================
+     ===============================================================================================================================================
+  */
 #formulario {
     background-color: #000a1a;
     width: 90rem;
-    margin-bottom: 8rem;
     box-shadow: 3px 3px 3px black;
     @include paddingForm;
+    margin-bottom: 8rem;
 }
 
 #formulario2 {
     background-color: #000a1a;
-    width: 45rem;
     margin-bottom: 8rem;
     box-shadow: 3px 3px 3px black;
     @include paddingForm;
@@ -277,6 +280,7 @@ p {
 
 input {
     height: 4.5rem;
+    font-size: 2rem;
     margin-top: 1rem;
     text-align: center;
     color: black;
@@ -304,11 +308,23 @@ input {
 
 textarea {
     width: 25rem;
+    font-size: 2rem;
     height: 17rem;
     max-height: 25rem;
     color: black;
 }
 
+#menu-select {
+    font-size: 2.3rem;
+}
+
+#tarjeta-select {
+    font-size: 2rem;
+}
+
+#lista-reservas {
+    font-size: 2rem;
+}
 /* 
   ======================================================= Formulario recuadro ===========================================================
 */
@@ -323,7 +339,7 @@ textarea {
 
     h3 {
         text-align: center;
-        font-size: 2rem;
+        font-size: 3.5rem;
         margin-bottom: 3rem;
     }
 
@@ -353,7 +369,7 @@ a {
 }
 
 #entrada {
-    font-size: 1.5rem;
+    font-size: 2.3rem;
     margin-bottom: 0rem;
     margin-top: 2rem;
 }
@@ -376,14 +392,16 @@ a {
 }
 
 .form-control {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 .link-light {
     margin-top: 1rem;
 }
-
-/* ======================================================= Calendario ======================================================================== */
+/* ===============================================================================================================================================
+     ======================================================= Calendario =========================================================================
+     ===============================================================================================================================================
+  */
 #calendario {
     font-size: 4rem;
     padding: 1.5rem;
@@ -396,37 +414,18 @@ a {
 .fc-event-main {
     font-size: 1.5rem;
 }
+
 .fc-daygrid-event {
-    height: 3.5rem;
+    height: 2.5rem;
 }
 
-/* ======================================================= Bloque 1 ======================================================================== */
-#bloque1 {
-    background-image: url(../../public/img/Index.png);
-    background-size: cover;
-    background-position: center center;
-    border-radius: 3rem;
-    font-size: 1rem;
-    padding: 5rem;
-    margin-top: 3rem;
+.fc-daygrid-day-frame {
+    height: 6rem;
 }
-
-/* ======================================================= Bloque 2 ======================================================================== */
-#bloque2 {
-    font-size: 1rem;
-    margin-bottom: 5rem;
-    margin-top: 6rem;
-
-    #infoBloque2 {
-        margin-top: 5rem;
-    }
-}
-
-#imagenBloque2 {
-    margin-left: 8rem;
-}
-
-/* ======================================================= Menu ======================================================================== */
+/* ===============================================================================================================================================
+     ======================================================= Menus de la carta =========================================================================
+     ===============================================================================================================================================
+  */
 #menu {
     margin-top: 5rem;
     margin-bottom: 5rem;
@@ -440,11 +439,15 @@ a {
 
 fieldset {
     padding: 0.75rem;
-    border: 3px solid $colorSecundario;
+    border: 3px solid #000a1a;
     box-shadow: 2px 2px 2px black;
+    background-color: $colorSecundario;
 }
 
-/* ======================================================= Tablas ======================================================================== */
+/* ===============================================================================================================================================
+     ======================================================= Tablas =========================================================================
+     ===============================================================================================================================================
+  */
 table {
     color: $colorTerciario;
 }
@@ -509,6 +512,12 @@ tr {
     .campoActualizado {
         width: 95%;
     }
+    #imagen-login {
+        display: none;
+    }
+    #Logo {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 55rem) {
@@ -523,13 +532,6 @@ tr {
     #horasDisponibles {
         display: flex;
     }
-
-    #imagenBloque2 {
-        display: none;
-    }
-    #Logo {
-        display: none;
-    }
 }
 
 /* ===============================================================================================================================================
@@ -537,6 +539,17 @@ tr {
      ===============================================================================================================================================
   */
 @media (max-width: 43rem) {
+    #tabla-misreservas {
+        width: 75%;
+    }
+    #encabezado-tabla {
+        font-size: 3rem;
+    }
+
+    #contenido-tabla {
+        font-size: 3rem;
+    }
+
     .titulo-index {
         font-size: 10rem;
         margin-top: 16rem;
@@ -550,19 +563,6 @@ tr {
 
     #menu-titulo {
         margin-top: 2rem;
-    }
-
-    #bloque1 {
-        font-size: 0.5rem;
-        padding: 1rem;
-    }
-
-    #bloque2 {
-        margin-top: 0rem;
-    }
-
-    #imagenBloque2 {
-        margin-left: 0rem;
     }
 
     .opcion,

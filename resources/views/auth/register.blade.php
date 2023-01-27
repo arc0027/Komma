@@ -45,7 +45,7 @@
                                 <label id="entrada" for="phone" class="form-label">Telefono</label>
                                 <input id="phone" type="tel"
                                     class="form-control focus:border-yellow-600 @error('phone') is-invalid @enderror"
-                                    name="phone" required autocomplete="phone" placeholder="Telefono">
+                                    name="phone" value="{{ old('phone') }}" required autocomplete="phone" placeholder="Telefono">
                                 @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>

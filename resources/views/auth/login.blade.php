@@ -13,18 +13,18 @@
     @endsection
 
     @section('contenido')
-        <div class="flex justify-center">
+        <div class="justify-center">
+            <div class="row p-8 mb-11">
+                <div class="col-lg-6">
+                    <fieldset id="imagen-login" class="mt-4">
+                        <img src="../../../public/img/Imagen-Login.svg" class="img-fluid" alt="Imagen de login">
+                    </fieldset>
+                </div>
 
-            <form id="formulario" class="w-3/4 h-auto m-6 pt-8 pb-8 pr-16 pl-16 text-3xl" method="POST"
-                action="{{ route('login') }}">
-                @csrf
-                <div class="row">
-                    <div class="col-sm-7">
-                        <fieldset id="imagen-login" class="mt-4 p-3">
-                            <img src="../../../public/img/Imagen-Login.svg" class="img-fluid" alt="Imagen de login">
-                        </fieldset>
-                    </div>
-                    <div class="col-sm-5 p-3">
+                <div class="col-lg-6">
+                    <form id="formulario2" class="h-auto m-5 pt-8 pb-8 pr-16 pl-16 text-3xl" method="POST"
+                        action="{{ route('login') }}">
+                        @csrf
                         <label id="entrada" for="email" class="form-label">Email</label>
                         <input id="email" type="email"
                             class="form-control focus:border-yellow-600 @error('email') is-invalid @enderror" name="email"
@@ -53,8 +53,8 @@
                                 <a href="register" class="link-light">Registrarse</a>
                             </div>
                         </div>
-                    </div>
                 </div>
+            </div>
 
 
 

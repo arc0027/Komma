@@ -87,6 +87,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::post('/contacto', [ContactoController::class, 'store']);
 
+// Tarjeta
+Route::get('/pagos', [TarjetasController::class, 'showTarjetas']);
 Route::post('/pagos', [TarjetasController::class, 'crearTarjeta']);
 
 // Horario reserva

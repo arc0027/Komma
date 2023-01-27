@@ -6,6 +6,7 @@ use DateTime;
 use App\Models\User;
 use App\Models\Tarjetas;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 
@@ -29,15 +30,16 @@ class TarjetasController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request,[
-        'numero_tarjeta' =>  'required|in:16',
-        'fecha_vencimiento' => 'required|',
-        'CVV' => 'required|in:3',
-        ]);
+        
     }
 
     public function crearTarjeta(Request $request)
     {
+        $this->validate($request,[
+            'numero_tarjeta' =>  'required|min:16|max:16',
+            'fecha_vencimiento' => 'required',
+            'CVV' => 'required|min:3|max:3',
+        ]);
         $usuario = User::find(Auth::id());
         $fecha_vencimiento = $request->input('fecha_vencimiento');
         $fechaString = (new DateTime($fecha_vencimiento))->format('d/m/Y');
@@ -52,7 +54,23 @@ class TarjetasController extends Controller
         $tarjeta->save();
     
         Session::flash("mensaje", "Su tarjeta se ha registrado correctamente");
-        return view('pagos');
+        return redirect('pagos');
+    }
+
+    public function showTarjetas()
+    {
+        $tarjetas = Tarjetas::where('id_users', Auth::id())->get();
+        return view("pagos")->with(['tarjetas' => $tarjetas]);
+        dd( $tarjetas);
+    }
+
+    public function cancelarTarjeta($numero_tarjeta)
+    {
+        $tarjeta = Tarjetas::where('id_users', Auth::id())->where('numero_tarjeta', $numero_tarjeta)->get();
+        dd( $tarjeta);
+        $tarjeta->delete();
+        Session::flash("mensaje", "Su reserva se ha cancelado correctamente");
+        return redirect("pagos");
     }
 
      /**

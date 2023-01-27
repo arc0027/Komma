@@ -8,6 +8,7 @@ use App\Models\Menus;
 use App\Models\Mesas;
 use App\Models\Horarios;
 use App\Models\Reservas;
+use App\Models\Tarjetas;
 use App\Models\Invitados;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -44,14 +45,7 @@ class ReservaController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, [
-            //'email' => 'required|email|exists:users|confirmed',
-            'name' => 'required|min:2|max:30',
-            'phone' => 'required|min:10|numeric',
-            'person' => 'required|numeric|between:4,8',
-        ]);
-        Session::flash("mensaje", "Su reserva se ha registrado correctamente");
-        return view("reserva3");
+
     }
 
     /**
@@ -116,7 +110,8 @@ class ReservaController extends Controller
         $hora = $request->get('hora');
         $fecha = $request->get('fecha');
         $menus = Menus::get(['name']);
-        return view("reserva2")->with(['hora' => $hora, 'fecha' => $fecha, 'menus' => $menus]);
+        $tarjetas = Tarjetas::where('id_users', Auth::id())->get();
+        return view("reserva2")->with(['hora' => $hora, 'fecha' => $fecha, 'menus' => $menus, 'tarjetas' => $tarjetas]);
     }
 
     /**
@@ -127,7 +122,7 @@ class ReservaController extends Controller
      * @return la vista "reservaFinalizada"
      */
     public function reserva(Request $request)
-    {
+    {       
         $person = $request->input('person');
         $email = $request->input('email');
         $menus = $request->input('menus');

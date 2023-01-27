@@ -19,10 +19,10 @@
                     <div class="flex justify-center">
                         <img src="img/Sesion.png" width="100px" height="100px" alt="Imagen de perfil" />
                     </div>
-                    <p>
-                        <br> <b class="text-2xl">Nombre:</b> {{ auth()->user()->name }} <br />
-                        <b class="text-2xl">Email:</b> {{ auth()->user()->email }} <br />
-                        <b class="text-2xl">Telefono:</b> {{ auth()->user()->phone }}
+                    <p class="text-3xl">
+                        <br> <b class="text-3xl">Nombre:</b> {{ auth()->user()->name }} <br />
+                        <b class="text-3xl">Email:</b> {{ auth()->user()->email }} <br />
+                        <b class="text-3xl">Telefono:</b> {{ auth()->user()->phone }}
                     </p>
                 </div>
                 <div class="col-sm-6 justify-center">

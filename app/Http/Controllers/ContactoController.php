@@ -27,7 +27,7 @@ class ContactoController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-        'email' => 'required|email|exists:users|confirmed',
+        'email' => 'required|string|email|unique:users|max:255',
         'email_confirmation' => 'required',
         'name' => 'required|min:5|max:30',
         'asunto' => 'required|min:5|max:120',
