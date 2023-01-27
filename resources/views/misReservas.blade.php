@@ -34,7 +34,6 @@
                             @if (count($reservas) > 0)
                                 <thead id="encabezado-tabla" class="thead-dark text-7xl">
                                     <tr>
-                                        <th>Id</th>
                                         <th>Fecha</th>
                                         <th>Hora</th>
                                         <th>Menu</th>
@@ -46,7 +45,6 @@
                                     @isset($reservas)
                                         @foreach ($reservas as $r)
                                             <tr>
-                                                <td>{{ $r->id_reservas }}</td>
                                                 <td>{{ $r->horarios->fecha }}</td>
                                                 <td>{{ $r->horarios->hora }}</td>
                                                 <td>{{ $r->menus->name }}</td>

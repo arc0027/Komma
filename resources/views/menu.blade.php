@@ -21,7 +21,7 @@
                     </fieldset>
                 </div>
                 <div class="col-sm-9 text-center">
-                    <h3 id="menu-titulo">El pulpo de roca con miel de membrillo de Atrapallada</h3>
+                    <h3 id="menu-titulo">Pulpo de roca con miel de membrillo</h3>
                     <p>
                         Unas patas de pulpo pasadas por la parrilla, servidas sobre <br>
                         un puré de patata con pimentón y acompañadas de una original <br>
