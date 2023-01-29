@@ -29,7 +29,7 @@
                     <div class="col">
                         <label id="entrada" for="numero_tarjeta" class="form-label">Numero de tarjeta</label>
                         <input type="number" id="numero_tarjeta" name="numero_tarjeta"
-                            class="form-control focus:border-yellow-600" required>
+                            class="form-control focus:border-yellow-600" required  value={{ old('numero_tarjeta') }}>
                         @error('numero_tarjeta')
                             <p id="validacion" class="text-white">
                                 {{ $message }}
@@ -41,7 +41,7 @@
                     <div class="col-sm-6">
                         <label id="entrada" for="fecha_vencimiento" class="form-label">Fecha de vencimiento</label>
                         <input type="date" id="fecha_vencimiento" name="fecha_vencimiento"
-                            class="form-control focus:border-yellow-600" required />
+                            class="form-control focus:border-yellow-600" required value={{ old('fecha_vencimiento') }}/>
                         @error('fecha_vencimiento')
                             <p id="validacion" class="text-white">
                                 {{ $message }}
@@ -51,7 +51,7 @@
                     <div class="col-sm-6">
                         <label id="entrada" for="CVV" class="form-label">CVV</label>
                         <input type="number" id="CVV" name="CVV" class="form-control focus:border-yellow-600"
-                            required>
+                            required value={{ old('CVV') }}>
                         @error('CVV')
                             <p id="validacion" class="text-white">
                                 {{ $message }}
