@@ -117,12 +117,12 @@
                     @csrf
                     <h3 id="reserva-datos">Datos de reserva</h3>
                     <div class="row">
-                        <div class="col-sm-6">
-                            <p class="text-center text-4xl"><i class="fa fa-calendar text-3xl mr-3"></i><b
+                        <div class="col-sm-4 mt-3">
+                            <p class="text-center text-4xl"><i class="material-symbols-outlined text-3xl mr-3">calendar_month</i><b
                                     class="text-4xl">Fecha :</b> {{ date('d-m-Y', strtotime($fecha)) }}</p>
                         </div>
-                        <div class="col-sm-6">
-                            <p class="text-center text-4xl"><i class="fa fa-clock text-2xl mr-3"></i><b
+                        <div class="col-sm-4 mt-3">
+                            <p class="text-center text-4xl"><i class="material-symbols-outlined text-3xl mr-3">alarm</i><b
                                     class="text-4xl">Hora :</b> {{ $hora }}</p>
                         </div>
                         <div class="col-sm-5">
