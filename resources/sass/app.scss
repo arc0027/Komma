@@ -4,6 +4,8 @@
 */
 // Font
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,0");
 
 // Normalize
 @import "normalize";
@@ -81,6 +83,7 @@ body {
     margin: 0rem;
 }
 
+
 /* ===============================================================================================================================================
      ======================================================= Encabezado ============================================================================
      ===============================================================================================================================================
@@ -144,7 +147,7 @@ header {
     text-shadow: 3px 3px $colorBase;
 }
 
-.botonIndex {
+#botonIndex {
     @include btn;
     background-color: $hover;
     border: 1px solid;
@@ -153,7 +156,7 @@ header {
     margin-top: 3rem;
 }
 
-.botonIndex:hover {
+#botonIndex:hover {
     color: $colorBase;
     background-color: $colorSecundario;
     border: 2px solid;
@@ -348,15 +351,6 @@ textarea {
     }
 }
 
-.opcion {
-    border: 1px solid $colorTerciario;
-    width: 83rem;
-    height: 4rem;
-    padding: 0.5rem;
-    border-radius: 2rem;
-    margin: 1rem;
-}
-
 #lista {
     display: block;
     border-top: 1px solid $colorSecundario;
@@ -374,23 +368,6 @@ a {
     margin-top: 2rem;
 }
 
-.campoActualizado {
-    width: 75rem;
-    padding: 5rem;
-    border: 1px solid $colorTerciario;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    border-radius: 5rem;
-    margin-left: 35rem;
-}
-
-.cuadro {
-    border: 1px solid $colorTerciario;
-    width: 3rem;
-    height: 2rem;
-    border-radius: 0.25rem;
-}
-
 .form-control {
     font-size: 2rem;
 }
@@ -398,6 +375,7 @@ a {
 .link-light {
     margin-top: 1rem;
 }
+
 /* ===============================================================================================================================================
      ======================================================= Calendario =========================================================================
      ===============================================================================================================================================
@@ -493,7 +471,7 @@ tr {
     }
     #contactos-empresa {
         i {
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
     }
     #copyright p {
@@ -507,9 +485,7 @@ tr {
      ===============================================================================================================================================
   */
 @media screen and (max-width: 75rem) {
-    .recuadro,
-    .opcion,
-    .campoActualizado {
+    .recuadro {
         width: 95%;
     }
     #imagen-login {
@@ -563,11 +539,6 @@ tr {
 
     #menu-titulo {
         margin-top: 2rem;
-    }
-
-    .opcion,
-    .campoActualizado {
-        margin-left: 2rem;
     }
 
     #perfil {
@@ -628,7 +599,7 @@ tr {
         text-align: center;
         width: 100%;
         background-color: $colorBase;
-        top: 10rem;
+        top: 11rem;
         right: 0rem;
 
         .reserva {
@@ -672,6 +643,7 @@ h6 {
     richness: 90;
     speak: normal;
 }
+
 
 p {
     voice-family: male;

@@ -30,12 +30,11 @@ class TarjetasController extends Controller
      */
     public function store(Request $request)
     {
-        
     }
 
     public function crearTarjeta(Request $request)
     {
-        $this->validate($request,[
+        $this->validate($request, [
             'numero_tarjeta' =>  'required|min:16|max:16',
             'fecha_vencimiento' => 'required',
             'CVV' => 'required|min:3|max:3',
@@ -52,7 +51,7 @@ class TarjetasController extends Controller
         $tarjeta->fecha_vencimiento = $fechaString;
         $tarjeta->cvv = $CVV;
         $tarjeta->save();
-    
+
         Session::flash("mensaje", "Su tarjeta se ha registrado correctamente");
         return redirect('pagos');
     }
@@ -61,19 +60,21 @@ class TarjetasController extends Controller
     {
         $tarjetas = Tarjetas::where('id_users', Auth::id())->get();
         return view("pagos")->with(['tarjetas' => $tarjetas]);
-        dd( $tarjetas);
+        dd($tarjetas);
     }
 
-    public function cancelarTarjeta($numero_tarjeta)
+    public function eliminarTarjeta($num, $cvv)
     {
-        $tarjeta = Tarjetas::where('id_users', Auth::id())->where('numero_tarjeta', $numero_tarjeta)->get();
-        dd( $tarjeta);
-        $tarjeta->delete();
-        Session::flash("mensaje", "Su reserva se ha cancelado correctamente");
+        Tarjetas::where('id_users', Auth::id())
+            ->whereRaw("SUBSTR(numero_tarjeta, -4) = '$num'")
+            ->where('cvv', $cvv)
+            ->delete();
+
+        Session::flash("mensaje", "Su tarjeta se ha eliminado correctamente");
         return redirect("pagos");
     }
 
-     /**
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response

@@ -45,7 +45,6 @@ class ReservaController extends Controller
      */
     public function store(Request $request)
     {
-
     }
 
     /**
@@ -68,6 +67,7 @@ class ReservaController extends Controller
                 "end" => $f["fecha"]
             );
         }
+
         return response()->json($datos);
     }
 
@@ -78,24 +78,20 @@ class ReservaController extends Controller
      */
     public function eventoHoras(Request $request)
     {
-        switch ($request->type) {
-            case "mostrarHoras":
+        $horario = Horarios::where([
+            ["fecha", "=", $request->get("fecha")],
+            ["estados", "=", "Disponible"]
+        ])->get();
 
-                $horario = Horarios::where([
-                    ["fecha", "=", $request->get("fecha")],
-                    ["estados", "=", "Disponible"]
-                ])->get();
+        $horas = array();
 
-                $horas = array();
-
-                foreach ($horario as $h) {
-                    $horas[] = array(
-                        "id" => $h["id"],
-                        "hora" => date("H:i", strtotime($h["hora"])),
-                    );
-                }
-                return response()->json($horas);
+        foreach ($horario as $h) {
+            $horas[] = array(
+                "id" => $h["id"],
+                "hora" => date("H:i", strtotime($h["hora"])),
+            );
         }
+        return response()->json($horas);
     }
 
     /**
@@ -122,7 +118,7 @@ class ReservaController extends Controller
      * @return la vista "reservaFinalizada"
      */
     public function reserva(Request $request)
-    {       
+    {
         $person = $request->input('person');
         $email = $request->input('email');
         $menus = $request->input('menus');
@@ -154,7 +150,7 @@ class ReservaController extends Controller
             $reserva->numero_personas =  $person;
             $reserva->save();
             Horarios::where('id', $idHorario)->update(['estados' => 'No Disponible']);
-            
+
             Session::flash("mensaje", "Su reserva se ha registrado correctamente");
             return redirect("misReservas");
         } else {
@@ -177,7 +173,7 @@ class ReservaController extends Controller
 
             Session::flash("mensaje", "Su reserva se ha registrado correctamente");
             return view("reservaFinalizada");
-        }  
+        }
     }
 
     /**

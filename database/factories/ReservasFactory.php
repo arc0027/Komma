@@ -27,8 +27,8 @@ class ReservasFactory extends Factory
             'id_menus' => fake()->randomElement(Menus::all())['id'],
             'id_mesas' => fake()->randomElement(Mesas::all())['id'],
             'fecha_reservas' =>  fake()->randomElement(Horarios::all())['id'],
-            'numero_tarjetas' => fake()->randomNumber(1),
-            'numero_personas' => fake()->randomNumber(1),
+            'numero_tarjetas' => fake()->randomNumber(8).fake()->randomNumber(8),
+            'numero_personas' => fake()->numberBetween(4, 8),
         ];
     }
 }

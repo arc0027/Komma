@@ -24,6 +24,7 @@
                         <b class="text-3xl">Email:</b> {{ auth()->user()->email }} <br />
                         <b class="text-3xl">Telefono:</b> {{ auth()->user()->phone }}
                     </p>
+
                 </div>
                 <div class="col-sm-6 justify-center">
                     <form action="/misReservas" class="flex justify-center mb-8">
@@ -36,8 +37,8 @@
                         @csrf
                         <input id="botonPerfil" type="submit" value="Cerrar sesion">
                     </form>
-
                 </div>
+
             </div>
         </div>
     @endsection

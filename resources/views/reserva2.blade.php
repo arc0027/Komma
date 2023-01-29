@@ -22,23 +22,23 @@
                     <h3 id="reserva-datos">Datos de reserva</h3>
                     <div class="row">
                         <div class="col-sm-4 mt-3">
-                            <p class="text-center text-4xl"><i class="fa fa-calendar text-3xl mr-3"></i><b
+                            <p class="text-center text-4xl"><i class="material-symbols-outlined text-3xl mr-3">calendar_month</i><b
                                     class="text-4xl">Fecha :</b> {{ date('d-m-Y', strtotime($fecha)) }}</p>
                         </div>
                         <div class="col-sm-4 mt-3">
-                            <p class="text-center text-4xl"><i class="fa fa-clock text-2xl mr-3"></i><b
+                            <p class="text-center text-4xl"><i class="material-symbols-outlined text-3xl mr-3">alarm</i><b
                                     class="text-4xl">Hora :</b> {{ $hora }}</p>
                         </div>
                         <div class="col-sm-4 mt-3">
-                            <p class="text-center text-4xl"><i class="fa fa-phone text-2xl mr-3"></i><b
+                            <p class="text-center text-4xl"><i class="material-symbols-outlined text-3xl mr-3">phone</i><b
                                     class="text-4xl">Telefono :</b> {{ auth()->user()->phone }}</p>
                         </div>
                         <div class="col-sm-6 mt-3">
-                            <p class="text-center text-4xl"><i class="fa fa-user-circle text-2xl mr-3"></i><b
+                            <p class="text-center text-4xl"><i class="material-symbols-outlined text-3xl mr-3">mail</i><b
                                     class="text-4xl">Email :</b> {{ auth()->user()->email }}</p>
                         </div>
                         <div class="col-sm-6 mt-3">
-                            <p class="text-center text-4xl"><i class="fa fa-address-card  text-2xl mr-3"></i><b
+                            <p class="text-center text-4xl"><i class="material-symbols-outlined text-3xl mr-3">account_circle</i><b
                                     class="text-4xl">Nombre :</b> {{ auth()->user()->name }}</p>
                         </div>
 
@@ -106,7 +106,6 @@
                                 <button id="botonFormulario" type="submit" class="mt-10 mb-3">Reservar</button>
                             </div>
                         @else
-                        
                         @endif
 
 

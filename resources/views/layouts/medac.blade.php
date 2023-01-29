@@ -10,10 +10,8 @@
     <title>KOMMA</title>
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
-    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 
 <body>
@@ -84,10 +82,11 @@
                 </div>
                 <div id="contactos-empresa" class="col-lg-5 col-xs-12">
                     <h3 class="mt-lg-0 mt-sm-4">Información</h3>
-                    <p class="mb-0"><i class="fa  fa-map-marker mr-3"></i>C. Escritora Ángeles López de Ayala, 7, 14005 Córdoba</p>
-                    <p class="mb-0"><i class="fa fa-info mr-3"></i>Abierto: 10:00 - 00:00</p>
-                    <p class="mb-0"><i class="fa fa-phone mr-3"></i>+34 600102030</p>
-                    <p><i class="fa fa-envelope mr-3"></i>komma@gmail.com</p>
+                    <p class="mb-0"><i class="material-symbols-outlined mr-3">location_on</i>C. Escritora Ángeles López de Ayala, 7,
+                        14005 Córdoba</p>
+                    <p class="mb-0"><i class="material-symbols-outlined mr-3">info</i>Abierto: 10:00 - 00:00</p>
+                    <p class="mb-0"><i class="material-symbols-outlined mr-3">call</i>+34 600102030</p>
+                    <p><i class="material-symbols-outlined mr-3">mail</i>komma@gmail.com</p>
                 </div>
                 
                 <div id="Logo" class="col-lg-1 col-xs-12">

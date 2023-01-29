@@ -77,6 +77,7 @@
                                 <thead id="encabezado-tabla" class="thead-dark text-7xl">
                                     <tr>
                                         <th>Numero de la tarjeta</th>
+                                        <th>Opciones</th>
                                     </tr>
                                 </thead>
                                 <tbody id="contenido-tabla" class="text-7xl">
@@ -85,6 +86,9 @@
                                         @foreach ($tarjetas as $t)
                                             <tr>
                                                 <td> **** **** **** {{ substr($t->numero_tarjeta, -4) }}</td>
+                                                <td><a id="botonFormulario" class="text-base"
+                                                        href="/eliminarTarjeta/{{substr($t->numero_tarjeta, -4)}}/{{$t->cvv}}">Eliminar</a>
+                                                </td>
                                             </tr>
                                         @endforeach
                                     @endisset

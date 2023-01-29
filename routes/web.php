@@ -90,6 +90,7 @@ Route::post('/contacto', [ContactoController::class, 'store']);
 // Tarjeta
 Route::get('/pagos', [TarjetasController::class, 'showTarjetas']);
 Route::post('/pagos', [TarjetasController::class, 'crearTarjeta']);
+Route::get('/eliminarTarjeta/{num}/{cvv}', [TarjetasController::class, 'eliminarTarjeta']);
 
 // Horario reserva
 Route::get('/fechasDisponibles', [ReservaController::class, 'eventoFechas']);

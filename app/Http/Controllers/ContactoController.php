@@ -27,12 +27,13 @@ class ContactoController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-        'email' => 'required|string|email|unique:users|max:255',
-        'email_confirmation' => 'required',
-        'name' => 'required|min:5|max:30',
-        'asunto' => 'required|min:5|max:120',
-        'message' => 'required|min:5|max:500',
-        ]);
+            'email' => 'required | string | email | max:255' ,
+            'email_confirmation' => 'required',
+            'name' => 'required | min:5 | max:30',
+            'asunto' => 'required | min:5 | max:120',
+            'message' => 'required | min:5 | max:500',
+            ]);
+    
         $contacto = new Contactos;
         $contacto->email = $request->email;
         $contacto->name = $request->name;
