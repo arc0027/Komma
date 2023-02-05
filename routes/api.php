@@ -22,10 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('/auth/register', [AuthController::class, 'createUser']);
 Route::post('/auth/login', [AuthController::class, 'loginUser']);
+Route::get('/consultarReservas', [ReservaControllerApi::class, 'consultarReservas']);
+Route::get('/consultarHorarios', [ReservaControllerApi::class, 'consultarHorarios']);
+Route::post('/reservas', [ReservaControllerApi::class, 'insertarReserva']);
+Route::put('/reservas/{id}', [ReservaControllerApi::class, 'actualizarReserva']);
+Route::delete('/reservas/{id}', [ReservaControllerApi::class, 'borrarReserva']);
 
-Route::middleware('auth:sanctum')->group(function () {
-    Route::get('/misReservas', [ReservaControllerApi::class, 'consultarReservas']);
-    Route::post('/reservas', [ReservaControllerApi::class, 'insertarReserva']);
-    Route::put('/reservas/{id}', [ReservaControllerApi::class, 'actualizarReserva']);
-    Route::delete('/reservas/{id}', [ReservaControllerApi::class, 'borrarReserva']);
-});

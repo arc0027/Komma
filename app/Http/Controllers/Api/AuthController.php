@@ -25,7 +25,8 @@ class AuthController extends Controller
             [
                 'name' => 'required',
                 'email' => 'required|email|unique:users,email',
-                'password' => 'required'
+                'password' => 'required',
+                'phone' => 'required'
             ]);
 
             if($validateUser->fails()){
@@ -39,7 +40,8 @@ class AuthController extends Controller
             $user = User::create([
                 'name' => $request->name,
                 'email' => $request->email,
-                'password' => Hash::make($request->password)
+                'password' => Hash::make($request->password),
+                'phone' => $request->phone
             ]);
 
             return response()->json([

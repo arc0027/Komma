@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Reserva;
+use App\Models\Horarios;
 use App\Models\Reservas;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -13,6 +14,12 @@ class ReservaControllerApi extends Controller
     {
         $reservas = Reservas::all();
         return response()->json($reservas);
+    }
+    
+    public function consultarHorarios()
+    {
+        $horarios = Horarios::all();
+        return response()->json($horarios);
     }
 
     public function insertarReserva(Request $request)
