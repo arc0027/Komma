@@ -83,7 +83,6 @@ body {
     margin: 0rem;
 }
 
-
 /* ===============================================================================================================================================
      ======================================================= Encabezado ============================================================================
      ===============================================================================================================================================
@@ -154,13 +153,6 @@ header {
     border-color: $colorSecundario;
     color: $colorSecundario;
     margin-top: 3rem;
-}
-
-#botonIndex:hover {
-    color: $colorBase;
-    background-color: $colorSecundario;
-    border: 2px solid;
-    border-color: $colorBase;
 }
 
 /* ===============================================================================================================================================
@@ -644,10 +636,132 @@ h6 {
     speak: normal;
 }
 
-
 p {
     voice-family: male;
     stress: 15;
     richness: 50;
     speak: normal;
+}
+/* ===============================================================================================================================================
+     ======================================================= Animaciones ============================================================================
+     ===============================================================================================================================================
+  */
+#animacion {
+    transition: all 0.5s ease-in-out;
+}
+
+#animacion:hover {
+    transform: scale(1.2);
+    transition: transform 1s;
+}
+
+#animacion2 {
+    transition: all 0.5s ease-in-out;
+}
+
+#animacion2:hover {
+    opacity: 65%;
+    transform: scale(0.9);
+    transition: transform 1s;
+}
+
+#text {
+    transition: all 0.5s ease-in-out;
+}
+
+#text:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+#true {
+    transition: all 0.5s ease-in-out;
+}
+
+#true:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+#menu-titulo {
+    transition: all 0.5s ease-in-out;
+}
+
+#menu-titulo:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+#botonIndex {
+    transition: all 0.5s ease-in-out;
+}
+
+#botonIndex:hover {
+    transform: scale(1.1);
+    transition: transform 1s;
+}
+
+#menu {
+    animation: animacionImagen 1s ease-in-out;
+}
+
+@keyframes animacionImagen {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#text {
+    animation: animacionImagen 1s ease-in-out;
+}
+
+@keyframes animacionImagen {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#true {
+    animation: animacionImagen 1s ease-in-out;
+}
+
+@keyframes animacionImagen {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#botonIndex {
+    animation: animacionImagen 1s ease-in-out;
+}
+
+@keyframes animacionImagen {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#animacion2 {
+    animation: animacionImagen 1s ease-in-out;
+}
+
+@keyframes animacionImagen {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
 }

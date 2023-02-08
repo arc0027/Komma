@@ -15,7 +15,7 @@
     @section('contenido')
         <div class="justify-center">
             <div class="row p-8 mb-11">
-                <div class="col-lg-6">
+                <div id="animacion2" class="col-lg-6">
                     <fieldset id="imagen-login" class="mt-4">
                         <img src="../../../public/img/Imagen-Login.svg" class="img-fluid" alt="Imagen de login">
                     </fieldset>

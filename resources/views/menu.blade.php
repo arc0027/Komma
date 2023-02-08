@@ -14,8 +14,8 @@
 
     @section('contenido')
         <div class="container">
-            <div id="menu" class="row ">
-                <div class="col-sm-3 mb-3">
+            <div id="menu" class="row">
+                <div id="animacion" class="col-sm-3 mb-3">
                     <fieldset>
                         <img src="img/Menu 1.png" class="img-fluid" alt="Menu 1" />
                     </fieldset>
@@ -34,7 +34,7 @@
             <div id="lista"></div>
 
             <div id="menu" class="row">
-                <div class="col-sm-3 mb-3">
+                <div id="animacion" class="col-sm-3 mb-3">
                     <fieldset>
                         <img src="img/Menu 2.png" class="img-fluid" alt="Menu 2" />
                     </fieldset>
@@ -52,7 +52,7 @@
             <div id="lista"></div>
 
             <div id="menu" class="row">
-                <div class="col-sm-3 mb-3">
+                <div id="animacion" class="col-sm-3 mb-3">
                     <fieldset>
                         <img src="img/Menu 3.png" class="img-fluid" alt="Menu 3" />
                     </fieldset>
@@ -69,7 +69,7 @@
             <div id="lista"></div>
 
             <div id="menu" class="row">
-                <div class="col-sm-3 mb-3">
+                <div id="animacion" class="col-sm-3 mb-3">
                     <fieldset>
                         <img src="img/Menu 4.png" class="img-fluid" alt="Menu 4" />
                     </fieldset>
@@ -86,7 +86,7 @@
             <div id="lista"></div>
 
             <div id="menu" class="row">
-                <div class="col-sm-3 mb-3">
+                <div id="animacion" class="col-sm-3 mb-3">
                     <fieldset>
                         <img src="img/Menu 5.png" class="img-fluid" alt="Menu 5" />
                     </fieldset>

@@ -20,12 +20,12 @@
     <nav>
         <input type="checkbox" id="check" />
         <div class="boton">
-            <label for="check">
+            <label id="animacion" for="check">
                 <img src="img/Menu.png" height="75" width="80" alt="Menu de opciones" />
             </label>
         </div>
 
-        <div class="logo">
+        <div id="animacion" class="logo">
             <a href="index">
                 <img src="img/Logo.svg" height="75" width="105" alt="Logo del restaurante" />
             </a>
@@ -44,7 +44,7 @@
             </a>
         </div>
 
-        <div class="imagenLogo">
+        <div id="animacion" class="imagenLogo">
             <a href="login">
                 @if (Auth::user() != null)
                     <img src="img/Sesion.png" height="70" width="70" alt="Boton de login" />

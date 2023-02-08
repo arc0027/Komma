@@ -20,12 +20,12 @@
     <nav>
         <input type="checkbox" id="check" />
         <div class="boton">
-            <label for="check">
+            <label id="animacion" for="check">
                 <img src="img/Menu.png" height="75" width="80" alt="Menu de opciones" />
             </label>
         </div>
 
-        <div class="logo">
+        <div id="animacion" class="logo">
             <a href="index">
                 <img src="img/Logo.svg" height="75" width="105" alt="Logo del restaurante" />
             </a>
@@ -44,7 +44,7 @@
             </a>
         </div>
 
-        <div class="imagenLogo">
+        <div id="animacion" class="imagenLogo">
             <a href="login">
                 @if (Auth::user() != null)
                     <img src="img/Sesion.png" height="70" width="70" alt="Boton de login" />
@@ -88,14 +88,15 @@
                     <p class="mb-0"><i class="material-symbols-outlined mr-3">call</i>+34 600102030</p>
                     <p><i class="material-symbols-outlined mr-3">mail</i>komma@gmail.com</p>
                 </div>
-                
+
                 <div id="Logo" class="col-lg-1 col-xs-12">
                     <a href="index">
                         <img src="img/Logo.svg" height="75" width="105" alt="Logo del restaurante" />
                     </a>
                 </div>
                 <div class="col-lg-1 col-xs-12">
-                    <img width="75" src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fdaw211.medacarena.es%2Fmenu&chs=180x180&choe=UTF-8&chld=L|2"></a>
+                    <img width="75"
+                        src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fdaw211.medacarena.es%2Fmenu&chs=180x180&choe=UTF-8&chld=L|2"></a>
                 </div>
             </div>
 
