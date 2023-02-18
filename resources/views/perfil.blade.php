@@ -16,10 +16,10 @@
         <div class="container-fluid px-16 mb-10">
             <div id="perfil" class="row mb-8">
                 <div class="col-sm-6 text-center mb-6">
-                    <div class="flex justify-center">
+                    <div id="info-perfil" class="flex justify-center">
                         <img src="img/Sesion.png" width="100px" height="100px" alt="Imagen de perfil" />
                     </div>
-                    <p class="text-3xl">
+                    <p id="info-perfil" class="text-3xl">
                         <br> <b class="text-3xl">Nombre:</b> {{ auth()->user()->name }} <br />
                         <b class="text-3xl">Email:</b> {{ auth()->user()->email }} <br />
                         <b class="text-3xl">Telefono:</b> {{ auth()->user()->phone }}

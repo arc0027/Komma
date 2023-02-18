@@ -87,7 +87,7 @@
                 </div>
                 <div class="col-lg-1 col-xs-12">
                     <img width="75"
-                        src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fdaw211.medacarena.es%2Fmenu&chs=180x180&choe=UTF-8&chld=L|2"></a>
+                        src="https://chart.googleapis.com/chart?cht=qr&chl=https%3A%2F%2Fdaw211.medacarena.es%2Fmenu&chs=180x180&choe=UTF-8&chld=L|2" alt="QR">
                 </div>
             </div>
 

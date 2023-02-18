@@ -16,9 +16,11 @@
         <div class="justify-center">
             <div class="row p-8 mb-11">
                 <div id="animacion2" class="col-lg-6">
+                    <a href="register">
                     <fieldset id="imagen-login" class="mt-4">
                         <img src="../../../public/img/Imagen-Login.svg" class="img-fluid" alt="Imagen de login">
                     </fieldset>
+                </a>
                 </div>
 
                 <div class="col-lg-6">

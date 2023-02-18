@@ -438,6 +438,7 @@ tr {
 
 #botonPerfil {
     @include btn;
+    border-radius: 0rem;
     width: 100%;
 }
 
@@ -701,56 +702,33 @@ p {
     transition: transform 1s;
 }
 
-#menu {
-    animation: animacionImagen 1s ease-in-out;
+#botonPerfil:hover {
+    transform: scale(1.05);
+    transition: transform 1s;
 }
 
-@keyframes animacionImagen {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
+#menu {
+    animation: animacionImagen 1s ease-in-out;
 }
 
 #text {
     animation: animacionImagen 1s ease-in-out;
 }
 
-@keyframes animacionImagen {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
-}
-
 #true {
     animation: animacionImagen 1s ease-in-out;
-}
-
-@keyframes animacionImagen {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
 }
 
 #botonIndex {
     animation: animacionImagen 1s ease-in-out;
 }
 
-@keyframes animacionImagen {
-    from {
-        transform: scale(0);
-    }
-    to {
-        transform: scale(1);
-    }
+#info-perfil {
+    animation: animacionImagen 0.5s ease-in-out;
+}
+
+#botonPerfil {
+    animation: animacionImagen 1s ease-in-out;
 }
 
 #animacion2 {
